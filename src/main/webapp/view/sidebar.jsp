@@ -46,12 +46,12 @@
                 </a>
             </li>
             <li>
-                <a href="view/offer/offer.jsp">
+                <a href="OfferServlet">
                     <i class="fa-solid fa-house"><div class="bg-primary"></div></i>Offer
                 </a>
             </li>
             <li>
-                <a href="view/user/user.jsp">
+                <a href="UserServlet">
                     <i class="fa-solid fa-house"><div class="bg-primary"></div></i>User
                 </a>
             </li>
