@@ -18,12 +18,12 @@
     <div class="sidebar-content" data-simplebar style="height: calc(100% - 60px);">
         <div class="sidebar-brand">
             <a href="index.html">
-                <h2>TEKLABS</h2>
+                <h2>IMS</h2>
             </a>
         </div>
         <ul class="sidebar-menu pt-3">
             <li class="sidebar-dropdown">
-                <a href="index.jsp" >
+                <a href="/IMSs_war/view/candidatelist" >
                     <i class="fa-solid fa-house"><div class="bg-primary"></div></i>Menu
 
                 </a>
@@ -41,17 +41,17 @@
 
             </li>
             <li>
-                <a href="#">
+                <a href="InterviewServlet">
                     <i class="fa-solid fa-house"><div class="bg-primary"></div></i>Interview
                 </a>
             </li>
             <li>
-                <a href="offer">
+                <a href="view/offer/offer.jsp">
                     <i class="fa-solid fa-house"><div class="bg-primary"></div></i>Offer
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="view/user/user.jsp">
                     <i class="fa-solid fa-house"><div class="bg-primary"></div></i>User
                 </a>
             </li>
