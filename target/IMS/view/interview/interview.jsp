@@ -53,7 +53,7 @@
     <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content" data-simplebar style="height: calc(100% - 60px);">
             <div class="sidebar-brand">
-                <a href="index.html">
+                <a href="CandidateServlet">
                     <h2>IMS</h2>
                 </a>
             </div>
@@ -77,7 +77,7 @@
                         <h5 class="mb-0">Interview</h5>
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
-                                <li class="breadcrumb-item active" aria-current="page">List Interview</li>
+                                <li class="breadcrumb-item active" aria-current="page">Interview Schedule List</li>
                             </ul>
                         </nav>
                     </div>
@@ -101,7 +101,7 @@
                             <div class="col-lg-4 col-md-5">
                                 <div class="justify-content-md-end mt-4 mt-sm-0">
                                     <div class="d-grid">
-                                        <a href="/IMSs_war/view/createcandidate" class="btn btn-primary">Add New</a>
+                                        <a href="CreateInterviewServlet" class="btn btn-primary">Add New</a>
                                     </div>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                     <td class="p-3">Employee ID</td>
                                     <td class="p-3">Active</td>
                                     <td class="text-end p-3">
-                                        <a href="/IMSs_war/view/updatecandidate?&candidate_id="
+                                        <a href="CreateInterviewServlet"
                                            class="btn btn-icon btn-pills btn-soft-success"><i
                                                 class="uil uil-pen"></i></a>
 
