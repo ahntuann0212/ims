@@ -10,7 +10,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Candidate</title>
+    <title>Interview</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template"/>
     <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health"/>
@@ -89,162 +89,125 @@
                     <div class="col-12">
                         <form action="/view/createcandidate" method="post">
                             <div class="row">
-                                <h5 class="mb-0">I. Personal Information</h5>
+
                                 <div class="col-lg-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Full Name<span
+                                        <label class="form-label">Schedule Title<span
                                                 class="text-danger">*</span></label>
-                                        <input name="Fname" id="code" type="text" class="form-control"
-                                               placeholder="Type of name...">
+                                        <input name="title" id="code" type="text" class="form-control"
+                                               placeholder="Type of title...">
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="mb-6">
+                                        <label class="form-label">Job<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option>Select a job</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Candidate name <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option>Select candidate</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="mb-6">
+                                        <label class="form-label">Interview<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option>Select a interview</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
                                     </div>
                                 </div><!--end col-->
 
                                 <div class="col-lg-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Email <span
-                                                class="text-danger">*</span></label>
-                                        <input name="email" type="text" class="form-control"
-                                               placeholder="Type of email...">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">D.O.B </label>
-                                        <input name="dob" type="text"
+                                        <label class="form-label">Schedule Time
+                                            <span
+                                                    class="text-danger">*</span></label>
+                                        <input name="time" type="text"
                                                class="flatpickr flatpickr-input form-control"
                                                id="checkin-date">
                                     </div>
+                                    <label style="margin-right: 10px">From</label><input type="time" class="Time"
+                                                                                         name="TimeFrom" min="00:00"
+                                                                                         max="12:00">
+                                    <label style="margin-left: 20px;margin-right: 10px">To</label><input type="time"
+                                                                                                         class="Time"
+                                                                                                         name="TimeEnd"
+                                                                                                         min="00:00"
+                                                                                                         max="12:00">
                                 </div><!--end col-->
 
-                                <div class="col-lg-6 ">
-                                    <div class="mb-3">
-                                        <label class="form-label">Address : </label>
-                                        <input name="address" type="text" class="form-control"
-                                               placeholder="Type of address...">
-                                    </div>
-                                </div><!--end col-->
 
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="mb-6">
-                                        <label class="form-label">Phone number</label>
-                                        <input name="phone" type="text" class="form-control"
-                                               placeholder="Type of number :">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="mb-6">
-                                        <label class="form-label">Gender</label>
-                                        <select class="form-select form-control" id="inputGroupSelect01">
-                                            <option>Select a gender</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                        </select>
-                                    </div>
-                                </div><!--end col-->
-                                <h5 class="mb-0">II. Professional Information</h5>
                                 <div class="col-lg-6">
                                     <div class="mb-3">
-                                        <label class="form-label">CV attechment</label>
-                                        <input name="cv" type="file" class="form-control">
+                                        <label class="form-label">Location</label>
+                                        <input name="location" type="text" class="form-control "
+                                               placeholder="type ò location">
                                     </div>
                                 </div><!--end col-->
 
                                 <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Note</label>
-                                        <input name="note" type="text" class="form-control"
-                                               placeholder="N/A">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-6">
-                                    <div class="mb-3">
-                                        <label class="form-label">Position<span
-                                                class="text-danger">*</span></label>
-                                        <select class="form-select form-control" id="inputGroupSelect01"
-                                                name="position">
-                                            <option>Select a position..ex. Backend developer,..</option>
-                                            <option>Frontend developer</option>
-                                            <option>Full stack</option>
-                                        </select>
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-6 ">
-                                    <div class="mb-3">
-                                        <label class="form-label">Status <span
-                                                class="text-danger">*</span> </label>
-                                        <select class="form-select form-control" id="inputGroupSelect01" name="status">
-                                            <option>Select a status</option>
-                                            <option>Doing</option>
-                                            <option>To-Do</option>
-                                            <option>Done</option>
-                                        </select>
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="mb-6">
-                                        <label class="form-label">Skills<span class="text-danger">*</span></label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="selected-skills-input" placeholder="Selected skills...">
-                                            <ul id="selected-skills-list" class="selected-skills-list"></ul>
-                                            <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Choose Skills
-                                            </button>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <li><a class="dropdown-item" href="#" data-skill="Java">Java</a></li>
-                                                <li><a class="dropdown-item" href="#" data-skill="Node.js">Node.js</a></li>
-                                                <li><a class="dropdown-item" href="#" data-skill="System Design">System Design</a></li>
-                                                <!-- Thêm các lựa chọn khác tương tự -->
-                                            </ul>
+                                    <div class="mb-3" style="display: flex; flex-direction: column;">
+                                        <label class="form-label">Notes</label>
+                                        <div style="position: relative;">
+                                            <input name="note" type="text" class="form-control custom-input-height"
+                                                   style="height: 150px; padding-top: 5px;"
+                                                   placeholder=" ">
+                                            <span style="position: absolute; top: 5px; left: 5px; pointer-events: none;">Type schedule note...</span>
                                         </div>
                                     </div>
-                                </div><!--end col-->
-
-
+                                </div><!-- end col -->
 
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="mb-6">
-                                        <label class="form-label">Year of Experience</label>
-                                        <input name="YoE" type="number" class="form-control"
-                                               placeholder="Type of number">
-                                    </div>
-                                </div><!--end col-->
-
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="mb-6">
-                                        <label class="form-label">Recruiter<span
+                                        <label class="form-label">Recuirter owner<span
                                                 class="text-danger">*</span></label>
-                                        <input name="YoE" type="number" class="form-control"
-                                               placeholder="Recruiter name"><a href="#">Assign me</a>
+                                        <input name="recuirter" type="text" class="form-control"
+                                        ><a href="#">Assign me</a>
                                     </div>
                                 </div><!--end col-->
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="mb-6">
-                                        <label class="form-label">Highest level<span
-                                                class="text-danger">*</span></label>
-                                        <select class="form-select form-control" id="inputGroupSelect01" name="Hlevel">
-                                            <option>Select highest level</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                        </select>
+                                        <label class="form-label">Meeting ID</label>
+                                        <input name="meeting" type="text" class="form-control"
+                                        >
                                     </div>
                                 </div><!--end col-->
 
-                                <div class="col-lg-3">
-                                    <div class="d-grid" style="margin-top: 10px">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="d-flex justify-content-center">
+                                            <!-- Sử dụng justify-content-start để căn chỉnh button về phía trái -->
+                                            <div class="d-grid me-2" style="margin-top: 10px;margin-right: 100px">
+                                                <!-- Thêm lớp me-2 để tạo khoảng cách giữa các button -->
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                            <div class="d-grid" style="margin-top: 10px;margin-left: 100px">
+                                                <button type="submit" class="btn btn-primary">Cancel</button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="d-grid" style="margin-top: 10px">
-                                        <button type="submit" class="btn btn-primary">Cancel</button>
-                                    </div>
-                                </div><!--end col-->
+                                </div><!-- end row -->
                             </div><!--end row-->
                         </form>
                     </div>
@@ -280,7 +243,7 @@
     const dropdownMenuItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
 
     dropdownMenuItems.forEach(item => {
-        item.addEventListener('click', function(event) {
+        item.addEventListener('click', function (event) {
             event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
             const skill = this.dataset.skill;
             if (skill) {
@@ -302,7 +265,7 @@
                     const deleteButton = document.createElement('button');
                     deleteButton.textContent = 'x';
                     deleteButton.classList.add('delete-button');
-                    deleteButton.addEventListener('click', function() {
+                    deleteButton.addEventListener('click', function () {
                         // Xóa kỹ năng khỏi trường nhập dữ liệu và giao diện khi nhấn nút xóa
                         const skills = selectedSkillsInput.value.split(',').map(skill => skill.trim());
                         const index = skills.indexOf(skill);
@@ -324,8 +287,6 @@
         });
     });
 </script>
-
-
 
 
 </body>

@@ -90,12 +90,24 @@
                                         <form role="search" method="get" id="searchform" class="searchform">
                                             <div>
                                                 <input type="text" class="form-control border rounded-pill" name="s"
-                                                       id="s" placeholder="Search Keywords...">
+                                                       id="s" placeholder="Search">
                                                 <input type="submit" id="searchsubmit" value="Search">
                                             </div>
                                         </form>
                                     </div>
                                 </div>
+
+                                <%--<div class="search-bar p-0 d-none d-lg-block ms-2">
+                                    <div id="search" class="menu-search mb-0">
+                                        <form role="search" method="get" id="searchform" class="searchform">
+                                            <div>
+                                                <input type="text" class="form-control border rounded-pill" name="s"
+                                                       id="s" placeholder="Search">
+                                                <input type="submit" id="searchsubmit" value="Search">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>--%>
                             </div>
 
                             <div class="col-lg-4 col-md-5">
