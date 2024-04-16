@@ -113,7 +113,7 @@
                             <div class="col-lg-4 col-md-5">
                                 <div class="justify-content-md-end mt-4 mt-sm-0">
                                     <div class="d-grid">
-                                        <a href="CreateInterviewServlet" class="btn btn-primary">Add New</a>
+                                        <a href="CreateOfferServlet" class="btn btn-primary">Add New</a>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,6 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th class="p-3">1</th>
                                     <td class="p-3">Howard Tanner</td>
                                     <td class="p-3">howard@contact.com</td>
                                     <td class="p-3">20th Dec 2020</td>

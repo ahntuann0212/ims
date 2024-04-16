@@ -11,7 +11,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>User</title>
+    <title>Offer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template"/>
     <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health"/>
@@ -53,7 +53,7 @@
     <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content" data-simplebar style="height: calc(100% - 60px);">
             <div class="sidebar-brand">
-                <a href="index.html">
+                <a href="CandidateServlet">
                     <h2>IMS</h2>
                 </a>
             </div>
@@ -74,10 +74,10 @@
             <div class="layout-specing">
                 <div class="row">
                     <div class="col-lg-8 col-md-6">
-                        <h5 class="mb-0">Interview</h5>
+                        <h5 class="mb-0">Offer</h5>
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
-                                <li class="breadcrumb-item active" aria-current="page">List User</li>
+                                <li class="breadcrumb-item active" aria-current="page">Offer List</li>
                             </ul>
                         </nav>
                     </div>
@@ -90,18 +90,30 @@
                                         <form role="search" method="get" id="searchform" class="searchform">
                                             <div>
                                                 <input type="text" class="form-control border rounded-pill" name="s"
-                                                       id="s" placeholder="Search Keywords...">
+                                                       id="s" placeholder="Search">
                                                 <input type="submit" id="searchsubmit" value="Search">
                                             </div>
                                         </form>
                                     </div>
                                 </div>
+
+                                <%--<div class="search-bar p-0 d-none d-lg-block ms-2">
+                                    <div id="search" class="menu-search mb-0">
+                                        <form role="search" method="get" id="searchform" class="searchform">
+                                            <div>
+                                                <input type="text" class="form-control border rounded-pill" name="s"
+                                                       id="s" placeholder="Search">
+                                                <input type="submit" id="searchsubmit" value="Search">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>--%>
                             </div>
 
                             <div class="col-lg-4 col-md-5">
                                 <div class="justify-content-md-end mt-4 mt-sm-0">
                                     <div class="d-grid">
-                                        <a href="/IMSs_war/view/createcandidate" class="btn btn-primary">Add New</a>
+                                        <a href="CreateUserServlet" class="btn btn-primary">Add New</a>
                                     </div>
                                 </div>
                             </div>
@@ -115,27 +127,23 @@
                             <table class="table mb-0 table-center">
                                 <thead>
                                 <tr>
-                                    <th class="border-bottom p-3" style="min-width: 50px;">Title</th>
-                                    <th class="border-bottom p-3" style="min-width: 180px;">Candidate Name</th>
-                                    <th class="border-bottom p-3" style="min-width: 150px;">Interview</th>
-                                    <th class="border-bottom p-3" style="min-width: 150px;">Schedule</th>
-                                    <th class="border-bottom p-3" style="min-width: 150px;">Result</th>
+                                    <th class="border-bottom p-3" style="min-width: 50px;">Username</th>
+                                    <th class="border-bottom p-3" style="min-width: 180px;">Email</th>
+                                    <th class="border-bottom p-3" style="min-width: 150px;">Phone No.</th>
+                                    <th class="border-bottom p-3" style="min-width: 150px;">Role</th>
                                     <th class="border-bottom p-3">Status</th>
-                                    <th class="border-bottom p-3">Job</th>
                                     <th class="border-bottom p-3" style="min-width: 150px;">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <th class="p-3">1</th>
                                     <td class="p-3">Howard Tanner</td>
                                     <td class="p-3">howard@contact.com</td>
                                     <td class="p-3">20th Dec 2020</td>
                                     <td class="p-3">20th Dec 2020</td>
-                                    <td class="p-3">Employee ID</td>
                                     <td class="p-3">Active</td>
                                     <td class="text-end p-3">
-                                        <a href="/IMSs_war/view/updatecandidate?&candidate_id="
+                                        <a href="CreateInterviewServlet"
                                            class="btn btn-icon btn-pills btn-soft-success"><i
                                                 class="uil uil-pen"></i></a>
 

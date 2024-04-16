@@ -165,7 +165,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="mb-3" style="display: flex; flex-direction: column;">
-                                        <label class="form-label">Notes</label>
+                                        <label class="form-label" style="margin-top: 10px">Notes</label>
                                         <div style="position: relative;">
                                             <input name="note" type="text" class="form-control custom-input-height"
                                                    style="height: 150px; padding-top: 5px;"
@@ -178,7 +178,7 @@
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="mb-6">
-                                        <label class="form-label">Recuirter owner<span
+                                        <label class="form-label" style="margin-top: 10px">Recuirter owner<span
                                                 class="text-danger">*</span></label>
                                         <input name="recuirter" type="text" class="form-control"
                                         ><a href="#">Assign me</a>

@@ -35,6 +35,8 @@
     <link href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" rel="stylesheet">
     <!-- Css -->
     <link href="assets/css/style.min.css" rel="stylesheet" type="text/css" id="theme-opt"/>
+
+
 </head>
 <body>
 <!-- Loader -->
@@ -73,7 +75,7 @@
             <div class="layout-specing">
                 <div class="row">
                     <div class="col-lg-8 col-md-6">
-                        <h3 class="mb-0">Interview Schedule</h3>
+                        <h3 class="mb-0">Offer</h3>
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
                                 <li class="breadcrumb-item active" aria-current="page"><a
@@ -92,19 +94,22 @@
 
                                 <div class="col-lg-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Schedule Title<span
+                                        <label class="form-label">Candidate<span
                                                 class="text-danger">*</span></label>
-                                        <input name="title" id="code" type="text" class="form-control"
-                                               placeholder="Type of title...">
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option>Select Candidate Name</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
                                     </div>
                                 </div><!--end col-->
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="mb-6">
-                                        <label class="form-label">Job<span
+                                        <label class="form-label">Contract Type<span
                                                 class="text-danger">*</span></label>
                                         <select class="form-select form-control" id="inputGroupSelect01">
-                                            <option>Select a job</option>
+                                            <option>Select a type of contract</option>
                                             <option>1</option>
                                             <option>2</option>
                                         </select>
@@ -113,10 +118,10 @@
 
                                 <div class="col-lg-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Candidate name <span
+                                        <label class="form-label">Position <span
                                                 class="text-danger">*</span></label>
                                         <select class="form-select form-control" id="inputGroupSelect01">
-                                            <option>Select candidate</option>
+                                            <option>Select a position</option>
                                             <option>1</option>
                                             <option>2</option>
                                         </select>
@@ -125,73 +130,114 @@
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="mb-6">
-                                        <label class="form-label">Interview<span
+                                        <label class="form-label">Level<span
                                                 class="text-danger">*</span></label>
                                         <select class="form-select form-control" id="inputGroupSelect01">
-                                            <option>Select a interview</option>
+                                            <option>Select a level</option>
                                             <option>1</option>
                                             <option>2</option>
                                         </select>
                                     </div>
                                 </div><!--end col-->
 
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="mb-6">
+                                        <label class="form-label">Approver<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option>Select an apporver</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="mb-6">
+                                        <label class="form-label">Department<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option>Select a department</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="mb-6">
+                                        <label class="form-label" style="margin-top: 10px">Interview infor<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option>Select an interview schedule title</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select>
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="mb-6">
+                                        <label class="form-label" style="margin-top: 10px">Recuirter owner<span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select form-control" id="inputGroupSelect01">
+                                            <option></option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                        </select><a href="#">Assign to me</a>
+                                    </div>
+                                </div><!--end col-->
+
                                 <div class="col-lg-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Schedule Time
-                                            <span
-                                                    class="text-danger">*</span></label>
-                                        <input name="time" type="text"
-                                               class="flatpickr flatpickr-input form-control"
-                                               id="checkin-date">
+                                        <label class="form-label" style="margin-top: 10px">Contract Period
+                                            <span class="text-danger">*</span></label>
+                                        <label>From</label>
+                                        <input type="date" id="myDate" name="fromDate" min="2000-01-01" max="2050-12-31">
+                                        <label>To</label>
+                                        <input type="date" id="myDate" name="toDate" min="2000-01-01" max="2050-12-31">
                                     </div>
-                                    <label style="margin-right: 10px">From</label><input type="time" class="Time"
-                                                                                         name="TimeFrom" min="00:00"
-                                                                                         max="12:00">
-                                    <label style="margin-left: 20px;margin-right: 10px">To</label><input type="time"
-                                                                                                         class="Time"
-                                                                                                         name="TimeEnd"
-                                                                                                         min="00:00"
-                                                                                                         max="12:00">
+
                                 </div><!--end col-->
 
 
                                 <div class="col-lg-6">
                                     <div class="mb-3">
-                                        <label class="form-label">Location</label>
-                                        <input name="location" type="text" class="form-control "
-                                               placeholder="type ò location">
+                                        <label class="form-label" style="margin-top: 10px">Due Date
+                                            <span class="text-danger">*</span></label>
+
+                                        <input type="date" id="dueDate" name="dueDate">
+
+                                    </div>
+
+                                </div><!--end col-->
+
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Interview Notes</label>
+                                        <textarea name="interviewNote" class="form-control" rows="5" placeholder="Enter interview notes..."></textarea>
                                     </div>
                                 </div><!--end col-->
 
                                 <div class="col-lg-6">
-                                    <div class="mb-3" style="display: flex; flex-direction: column;">
+                                    <div class="mb-3">
+                                        <label class="form-label">Basic Salary</label>
+                                        <input name="salary" type="text" class="form-control "
+                                               placeholder="Enter basic salary">
+                                    </div>
+                                </div><!--end col-->
+
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
                                         <label class="form-label">Notes</label>
-                                        <div style="position: relative;">
-                                            <input name="note" type="text" class="form-control custom-input-height"
-                                                   style="height: 150px; padding-top: 5px;"
-                                                   placeholder=" ">
-                                            <span style="position: absolute; top: 5px; left: 5px; pointer-events: none;">Type schedule note...</span>
-                                        </div>
-                                    </div>
-                                </div><!-- end col -->
-
-
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="mb-6">
-                                        <label class="form-label">Recuirter owner<span
-                                                class="text-danger">*</span></label>
-                                        <input name="recuirter" type="text" class="form-control"
-                                        ><a href="#">Assign me</a>
+                                        <textarea name="note" class="form-control" rows="5" placeholder="Type a notes..."></textarea>
                                     </div>
                                 </div><!--end col-->
 
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="mb-6">
-                                        <label class="form-label">Meeting ID</label>
-                                        <input name="meeting" type="text" class="form-control"
-                                        >
-                                    </div>
-                                </div><!--end col-->
+
+
+
 
 
                                 <div class="row">
@@ -237,57 +283,11 @@
 <script src="assets/js/feather.min.js"></script>
 <!-- Main Js -->
 <script src="assets/js/app.js"></script>
-<script>
-    const selectedSkillsInput = document.getElementById('selected-skills-input');
-    const selectedSkillsList = document.getElementById('selected-skills-list');
-    const dropdownMenuItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
-
-    dropdownMenuItems.forEach(item => {
-        item.addEventListener('click', function (event) {
-            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-            const skill = this.dataset.skill;
-            if (skill) {
-                const currentValue = selectedSkillsInput.value;
-                const skillsArray = currentValue.split(',').map(skill => skill.trim()); // Chuyển chuỗi thành mảng các kỹ năng
-
-                // Kiểm tra xem kỹ năng đã tồn tại trong danh sách hay chưa
-                if (!skillsArray.includes(skill)) {
-                    // Thêm kỹ năng vào trường nhập dữ liệu
-                    if (currentValue) {
-                        selectedSkillsInput.value = currentValue + ', ' + skill;
-                    } else {
-                        selectedSkillsInput.value = skill;
-                    }
-                    // Tạo nút x cho kỹ năng vừa được thêm vào
-                    const skillElement = document.createElement('li');
-                    skillElement.classList.add('selected-skill');
-                    skillElement.textContent = skill;
-                    const deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'x';
-                    deleteButton.classList.add('delete-button');
-                    deleteButton.addEventListener('click', function () {
-                        // Xóa kỹ năng khỏi trường nhập dữ liệu và giao diện khi nhấn nút xóa
-                        const skills = selectedSkillsInput.value.split(',').map(skill => skill.trim());
-                        const index = skills.indexOf(skill);
-                        if (index !== -1) {
-                            skills.splice(index, 1);
-                            selectedSkillsInput.value = skills.join(', ');
-                            skillElement.remove();
-                        }
-                    });
-                    skillElement.appendChild(deleteButton);
-                    selectedSkillsList.appendChild(skillElement);
-                    // Cập nhật giá trị của input khi có sự thay đổi
-                    selectedSkillsInput.dispatchEvent(new Event('change'));
-                } else {
-                    // Nếu kỹ năng đã tồn tại, bạn có thể hiển thị một thông báo hoặc thực hiện hành động khác tùy ý
-                    alert('Kỹ năng đã được chọn trước đó!');
-                }
-            }
-        });
-    });
-</script>
 
 
 </body>
+
+
 </html>
+
+
