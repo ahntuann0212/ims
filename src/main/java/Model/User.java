@@ -8,6 +8,8 @@ public class User {
     private String phone;
     private String address;
     private String gender;
+
+    private int roleId;
     private String department;
     private String note;
     private String status;
@@ -82,6 +84,14 @@ public class User {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     public String getDepartment() {

@@ -7,7 +7,8 @@
   <welcome-file-list>
     <welcome-file>CandidateServlet</welcome-file>
     <welcome-file>/view/user/viewUser.jsp</welcome-file>
-
+    <welcome-file>CandidateServlet</welcome-file>
+    <welcome-file>/view/candidate/candidate.jsp</welcome-file>
 
 
   </welcome-file-list>
