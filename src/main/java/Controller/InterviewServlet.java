@@ -16,11 +16,16 @@ import java.util.List;
 public class InterviewServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/view/interview/interview.jsp").forward(request,response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String page = request.getParameter("page");
         if(page == null){
             page = "1";
         }
-        
+
         InterviewDAO dao = new InterviewDAO();
         List<Interview> interviews = dao.getInterviews();
         List subList = Helper.Pagination(interviews,Integer.parseInt(page),5);
@@ -29,9 +34,5 @@ public class InterviewServlet extends HttpServlet {
         request.setAttribute("page", page);
         request.setAttribute("total", total);
         request.getRequestDispatcher("/view/schedule/interview.jsp").forward(request,response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
 }

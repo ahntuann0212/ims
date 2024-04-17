@@ -169,7 +169,7 @@
 
                                 <div class="col-lg-6">
                                     <div class="mb-3" style="display: flex; flex-direction: column;">
-                                        <label class="form-label" style="margin-top: 10px">Notes</label>
+                                        <label class="form-label">Notes</label>
                                         <div style="position: relative;">
                                             <input name="note" type="text" class="form-control custom-input-height"
                                                    style="height: 150px; padding-top: 5px;"
@@ -182,7 +182,7 @@
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="mb-6">
-                                        <label class="form-label" style="margin-top: 10px">Recuirter owner<span
+                                        <label class="form-label">Recuirter owner<span
                                                 class="text-danger">*</span></label>
                                         <input name="recuirter" type="text" class="form-control"
                                         ><a href="#">Assign me</a>
@@ -249,56 +249,7 @@
 <script src="assets/js/feather.min.js"></script>
 <!-- Main Js -->
 <script src="assets/js/app.js"></script>
-<script>
-    const selectedSkillsInput = document.getElementById('selected-skills-input');
-    const selectedSkillsList = document.getElementById('selected-skills-list');
-    const dropdownMenuItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
 
-    dropdownMenuItems.forEach(item => {
-        item.addEventListener('click', function (event) {
-            event.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ <a>
-            const skill = this.dataset.skill;
-            if (skill) {
-                const currentValue = selectedSkillsInput.value;
-                const skillsArray = currentValue.split(',').map(skill => skill.trim()); // Chuyển chuỗi thành mảng các kỹ năng
-
-                // Kiểm tra xem kỹ năng đã tồn tại trong danh sách hay chưa
-                if (!skillsArray.includes(skill)) {
-                    // Thêm kỹ năng vào trường nhập dữ liệu
-                    if (currentValue) {
-                        selectedSkillsInput.value = currentValue + ', ' + skill;
-                    } else {
-                        selectedSkillsInput.value = skill;
-                    }
-                    // Tạo nút x cho kỹ năng vừa được thêm vào
-                    const skillElement = document.createElement('li');
-                    skillElement.classList.add('selected-skill');
-                    skillElement.textContent = skill;
-                    const deleteButton = document.createElement('button');
-                    deleteButton.textContent = 'x';
-                    deleteButton.classList.add('delete-button');
-                    deleteButton.addEventListener('click', function () {
-                        // Xóa kỹ năng khỏi trường nhập dữ liệu và giao diện khi nhấn nút xóa
-                        const skills = selectedSkillsInput.value.split(',').map(skill => skill.trim());
-                        const index = skills.indexOf(skill);
-                        if (index !== -1) {
-                            skills.splice(index, 1);
-                            selectedSkillsInput.value = skills.join(', ');
-                            skillElement.remove();
-                        }
-                    });
-                    skillElement.appendChild(deleteButton);
-                    selectedSkillsList.appendChild(skillElement);
-                    // Cập nhật giá trị của input khi có sự thay đổi
-                    selectedSkillsInput.dispatchEvent(new Event('change'));
-                } else {
-                    // Nếu kỹ năng đã tồn tại, bạn có thể hiển thị một thông báo hoặc thực hiện hành động khác tùy ý
-                    alert('Kỹ năng đã được chọn trước đó!');
-                }
-            }
-        });
-    });
-</script>
 
 
 </body>

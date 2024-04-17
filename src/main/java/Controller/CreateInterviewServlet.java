@@ -11,7 +11,7 @@ import java.io.IOException;
 public class CreateInterviewServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/view/interview/createInterview.jsp").forward(request,response);
+//        request.getRequestDispatcher("/view/schedule/createInterview.jsp").forward(request,response);
     }
 
     @Override
