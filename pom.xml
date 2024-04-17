@@ -46,19 +46,28 @@
       <version>12.3.1.jre8-preview</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
+    <dependency>
+      <groupId>jakarta.servlet.jsp.jstl</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+      <version>1.2.7</version>
+    </dependency>
+
+
+
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>5.6.15.Final</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+   <!--  https://mvnrepository.com/artifact/org.projectlombok/lombok
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
       <version>1.18.24</version>
       <scope>provided</scope>
-    </dependency>
+    </dependency>-->
 
 
   </dependencies>

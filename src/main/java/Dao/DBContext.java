@@ -44,26 +44,26 @@ public class DBContext {
         }
 
     }
-	public static void main(String[] args) {
-
-		try (Connection conn = getConnection()) {
-
-			if (conn != null) {
-
-				System.out.println("Connected to the database!");
-
-				// Perform database operations here
-
-			} else {
-
-				System.out.println("Failed to make connection!");
-
-			}
-
-		} catch (SQLException | ClassNotFoundException e) {
-
-			System.err.println("SQL Exception: " + e.getMessage());
-		}
-
-	}
+//	public static void main(String[] args) throws ClassNotFoundException {
+//
+//		try (Connection conn = getConnection()) {
+//
+//			if (conn != null) {
+//
+//				System.out.println("Connected to the database!");
+//
+//				// Perform database operations here
+//
+//			} else {
+//
+//				System.out.println("Failed to make connection!");
+//
+//			}
+//
+//		} catch (SQLException | ClassNotFoundException e) {
+//
+//			System.err.println("SQL Exception: " + e.getMessage());
+//		}
+//
+//	}
 }
