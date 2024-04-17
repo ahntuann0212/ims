@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li>
-                <a href="/IMSs_war/view/candidatelist">
+                <a href="CandidateServlet">
                     <i class="fa-solid fa-house"><div class="bg-primary"></div></i>Candidate
                 </a>
 
