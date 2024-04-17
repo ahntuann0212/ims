@@ -5,7 +5,7 @@
 <web-app>
   <display-name>ims</display-name>
   <welcome-file-list>
-    <welcome-file>InterviewServlet</welcome-file>
+    <welcome-file>CandidateServlet</welcome-file>
     <welcome-file>/view/user/viewUser.jsp</welcome-file>
 
 
