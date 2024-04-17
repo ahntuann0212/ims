@@ -1,6 +1,5 @@
 package Controller;
 
-import Dao.JobDAO;
 import Model.Job;
 
 import javax.servlet.ServletException;
@@ -23,7 +22,7 @@ public class JobController extends HttpServlet {
             throws ServletException, IOException {
         List<Job> listJob = daoJob.findAll();
         request.setAttribute("listJob", listJob);
-        request.getRequestDispatcher("../view/admin/dashboard.jsp").forward(request, response);
+        request.getRequestDispatcher("/view/job/job.jsp").forward(request, response);
     }
 
     /**
