@@ -142,8 +142,7 @@
                                 <div class="col-lg-6">
                                     <div class="mb-3">
                                         <label class="form-label">Schedule Time
-                                            <span
-                                                    class="text-danger">*</span></label>
+                                            <span class="text-danger">*</span></label>
                                         <input name="time" type="text"
                                                class="flatpickr flatpickr-input form-control"
                                                id="checkin-date">
