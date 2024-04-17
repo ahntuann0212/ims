@@ -6,6 +6,9 @@
   <display-name>ims</display-name>
   <welcome-file-list>
     <welcome-file>InterviewServlet</welcome-file>
-  <!--  <welcome-file>/view/candidate.jsp</welcome-file>-->
+    <welcome-file>/view/user/viewUser.jsp</welcome-file>
+
+
+
   </welcome-file-list>
 </web-app>

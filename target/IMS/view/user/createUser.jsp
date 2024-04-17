@@ -10,6 +10,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Offer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template"/>
@@ -79,9 +83,9 @@
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
                                 <li class="breadcrumb-item active" aria-current="page"><a
-                                        href="InterviewServlet">List Interview</a></li>
+                                        href="InterviewServlet">List User</a></li>
                                 <li class="breadcrumb-item active" aria-current="page"><a
-                                        href="CreateInterviewServlet">Create Interview</a></li>
+                                        href="CreateInterviewServlet">Create User</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -89,7 +93,7 @@
 
                 <div class="row" style="margin-top: 40px">
                     <div class="col-12">
-                        <form action="/view/createcandidate" method="post">
+                        <form class="cancel" action="${pageContext.request.contextPath}/UserServlet" method="get">
                             <div class="row">
 
 
@@ -180,8 +184,8 @@
                                                 class="text-danger">*</span></label>
                                         <select class="form-select form-control" id="inputGroupSelect01">
                                             <option>Select a status</option>
-                                            <option>1</option>
-                                            <option>2</option>
+                                            <option>Active</option>
+                                            <option>Inactive</option>
                                         </select>
                                     </div>
                                 </div><!--end col-->
@@ -196,26 +200,32 @@
                                 </div><!--end col-->
 
 
-
-
-
-
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="d-flex justify-content-center">
-                                            <!-- Sử dụng justify-content-start để căn chỉnh button về phía trái -->
-                                            <div class="d-grid me-2" style="margin-top: 10px;margin-right: 100px">
-                                                <!-- Thêm lớp me-2 để tạo khoảng cách giữa các button -->
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </div>
-                                            <div class="d-grid" style="margin-top: 10px;margin-left: 100px">
-                                                <button type="submit" class="btn btn-primary">Cancel</button>
+                                            <div class="d-grid me-2" style="margin-top: 10px;margin-left:-200px">
+                                                <button type="submit" value="search" class="btn btn-primary">Submit</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div><!-- end row -->
                             </div><!--end row-->
                         </form>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="d-flex justify-content-center">
+
+                                    <form class="cancel" onsubmit="history.back(); return false;">
+                                        <div class="d-grid" style="margin-top: -40px;margin-left: 200px">
+                                            <button type="submit" class="btn btn-primary">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div><!-- end row -->
+
+
                     </div>
                 </div><!--end row-->
             </div>

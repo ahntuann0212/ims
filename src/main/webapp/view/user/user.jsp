@@ -5,13 +5,17 @@
   Time: 11:10 AM
   To change this template use File | Settings | File Templates.
 --%>
-<%@page contentType="text/html" pageEncoding="UTF-8" language="java"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Offer</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template"/>
     <meta name="keywords" content="Appointment, Booking, System, Dashboard, Health"/>
@@ -74,10 +78,10 @@
             <div class="layout-specing">
                 <div class="row">
                     <div class="col-lg-8 col-md-6">
-                        <h5 class="mb-0">Offer</h5>
+                        <h5 class="mb-0">User</h5>
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb breadcrumb-muted bg-transparent rounded mb-0 p-0">
-                                <li class="breadcrumb-item active" aria-current="page">Offer List</li>
+                                <li class="breadcrumb-item active" aria-current="page">User List</li>
                             </ul>
                         </nav>
                     </div>
@@ -87,27 +91,24 @@
                             <div class="col-lg-8 col-md-7">
                                 <div class="search-bar p-0 d-none d-lg-block ms-2">
                                     <div id="search" class="menu-search mb-0">
-                                        <form role="search" method="get" id="searchform" class="searchform">
+                                        <form role="search" action="${pageContext.request.contextPath}/search" method="get" id="searchform" class="searchform">
                                             <div>
-                                                <input type="text" class="form-control border rounded-pill" name="s"
-                                                       id="s" placeholder="Search">
+                                                <input type="text" class="form-control border rounded-pill" name="s" id="s" placeholder="Search" >
                                                 <input type="submit" id="searchsubmit" value="Search">
+                                            </div>
+                                            <div >
+                                                <select class="form-select form-control" id="inputGroupSelect01"  >
+                                                    <option >Role</option>
+                                                    <option value="">Developer</option>
+                                                    <option value="">BA</option>
+                                                </select>
+
                                             </div>
                                         </form>
                                     </div>
                                 </div>
 
-                                <%--<div class="search-bar p-0 d-none d-lg-block ms-2">
-                                    <div id="search" class="menu-search mb-0">
-                                        <form role="search" method="get" id="searchform" class="searchform">
-                                            <div>
-                                                <input type="text" class="form-control border rounded-pill" name="s"
-                                                       id="s" placeholder="Search">
-                                                <input type="submit" id="searchsubmit" value="Search">
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>--%>
+
                             </div>
 
                             <div class="col-lg-4 col-md-5">
@@ -137,19 +138,19 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td class="p-3">Howard Tanner</td>
-                                    <td class="p-3">howard@contact.com</td>
-                                    <td class="p-3">20th Dec 2020</td>
-                                    <td class="p-3">20th Dec 2020</td>
-                                    <td class="p-3">Active</td>
+                                    <td class="p-3">${emp.username}</td>
+                                    <td class="p-3">${emp.email}</td>
+                                    <td class="p-3">${emp.phone}</td>
+                                    <td class="p-3">${emp.role}</td>
+                                    <td class="p-3">${emp.status}</td>
                                     <td class="text-end p-3">
+                                        <a href="ViewUserServlet" class="btn btn-icon btn-pills btn-soft-danger">
+                                            <i class="fa-regular fa-eye"></i></a>
+
                                         <a href="CreateInterviewServlet"
                                            class="btn btn-icon btn-pills btn-soft-success"><i
                                                 class="uil uil-pen"></i></a>
 
-                                        <a href="#" class="btn btn-icon btn-pills btn-soft-danger"
-                                           data-bs-toggle="modal" data-bs-target="#cancelappointment"><i
-                                                class="uil uil-trash"></i></a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -228,5 +229,23 @@
 <!-- Main Js -->
 <script src="assets/js/app.js"></script>
 
+
+<script>
+    function handleChange() {
+        var selectedValue = document.getElementById("inputGroupSelect01").value;
+        if (selectedValue === "1" || selectedValue === "2") {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "SearchRoleServlet?role=" + selectedValue, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+
+                    document.getElementById("dataTable").innerHTML = xhr.responseText;
+                }
+            };
+
+            xhr.send();
+        }
+    }
+</script>
 </body>
 </html>

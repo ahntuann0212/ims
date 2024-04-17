@@ -2416,7 +2416,7 @@ p {
     padding: 12px 15px;
     height: 40px;
     font-size: 14px;
-    display: block;
+    display: inline-block;
     width: 100%;
     outline: none !important;
     padding-right: 45px;

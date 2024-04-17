@@ -11,6 +11,10 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Interview</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Premium Bootstrap 4 Landing Page Template"/>
@@ -147,13 +151,15 @@
                                     <td class="p-3">Employee ID</td>
                                     <td class="p-3">Active</td>
                                     <td class="text-end p-3">
+                                        <a href="#" class="btn btn-icon btn-pills btn-soft-danger"
+                                           data-bs-toggle="modal" data-bs-target="#cancelappointment">
+                                            <i class="fa-regular fa-eye"></i></a>
+
                                         <a href="CreateInterviewServlet"
                                            class="btn btn-icon btn-pills btn-soft-success"><i
                                                 class="uil uil-pen"></i></a>
 
-                                        <a href="#" class="btn btn-icon btn-pills btn-soft-danger"
-                                           data-bs-toggle="modal" data-bs-target="#cancelappointment"><i
-                                                class="uil uil-trash"></i></a>
+
                                     </td>
                                 </tr>
                                 </tbody>
